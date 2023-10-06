@@ -1,0 +1,332 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+html{
+    scroll-behavior: smooth;
+}
+/* nav section */
+#logo {
+    margin: 10px 10px;
+}
+
+#logo img {
+    height: 50px;
+    margin: 3px 3px;
+}
+
+#stcky{
+    top: 0px;
+    position: sticky;
+    z-index: 3;
+
+}
+#navbar {
+    display: flex;
+    align-items: center;
+} 
+
+#navbar::before {
+    content: "";
+    background-color: black;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    opacity: .4;
+}
+
+#navbar ul {
+    display: flex;
+}
+
+#navbar ul li {
+    list-style: none;
+    font-size: 1.3rem;
+}
+
+#navbar ul li a {
+    border-radius: 3px;
+    color: white;
+    display: block;
+    padding: 7px;
+    margin: 0px 10px;
+    font-family: 'Rubik', sans-serif;
+    text-decoration: none;
+}
+
+#navbar ul li a:hover {
+    color: black;
+    background-color: white;
+}
+
+/* home section */
+#home {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 500px;
+    margin-bottom: 86px;
+    padding: 3px 600px;
+}
+
+#home::before {
+    content: "";
+    position: absolute;
+    background: url("home-background.jpg") no-repeat center center/cover;
+    top: 0px;
+    left: 0px;
+    height: 64%;
+    width: 100%;
+    z-index: -1;
+    opacity: .8;
+}
+
+.h-title {
+    font-family: 'Maven Pro', sans-serif;
+    color: white;
+    font-size: 3rem;
+    padding: 12px;
+}
+
+
+#home p {
+    font-family: 'Maven Pro', sans-serif;
+    font-size: 1.3rem;
+    color: white;
+}
+
+.btn{
+    margin: 15px;
+    padding: 6px 30px;
+    border: 2px solid white;
+    color: white;
+    background: transparent;
+    font-size: 1.5rem;
+    font-family: 'Rubik', sans-serif;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.btn:hover{
+    color: black;
+    background-color: white;
+}
+
+/* h section */
+.h-itame{
+    display: flex;
+    font-size: 2.5rem;
+    font-family: 'Maven Pro', sans-serif;
+    justify-content: center;
+    align-items: center;
+    height: 133px;
+}
+
+/* itame's section */
+#all-itame #i-box{
+    display: flex;
+    margin: 40px;
+}
+
+#i-box .box img{
+    height: 150px;
+}
+
+.box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 25px;
+    margin: 5px;
+    padding: 40px;
+    width: 100%;
+    border: 2px solid red;
+    background-color: rgb(248, 245, 240);
+}
+/* animation section */
+.pc-left{
+    position: relative;
+    animation-name: s-left;
+    animation-duration: 2s;
+    animation-iteration-count: 1;   
+    animation-timing-function: ease;
+    animation-delay: 0.1s;
+}
+@keyframes s-left{
+    0%{
+        opacity: 0;
+        right: 190px;
+    }
+    100%{
+        opacity: 1;
+        right: 0px;
+    }
+    
+}
+
+.pc-bottom{
+    position: relative;
+    animation-name: s-bottom;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease;
+    animation-delay: 0.1s;
+}
+@keyframes s-bottom{
+    0%{
+        opacity: 0;
+        bottom: -190px;
+    }
+    100%{
+        opacity: 1;
+        bottom: 0px;
+    }
+}
+
+.pc-right{
+    position: relative;
+    animation-name: s-right;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease;
+    animation-delay: 0.1s;
+}
+@keyframes s-right{
+    0%{
+        opacity: 0;
+        left: 190px;
+    }
+    100%{
+        opacity: 1;
+        left: 0px;
+    }
+}
+/* add's section */
+#claint{
+    height: 577px;
+}
+
+#claint::before{
+    content: "";
+    position: absolute;
+    background: url("roasted-pork-steak-dark-wooden-surface.jpg") no-repeat center center/cover;
+    width: 100%;
+    height: 30%;
+    z-index: -1;
+    opacity: .4;
+}
+
+#biv-claint{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 77px;
+}
+
+#claint img{
+    height: 100px;
+}
+
+.c-box{
+    padding: 34px;
+}
+
+@media screen and (max-width: 1240px){
+    #navbar ul li{
+        font-size: 1.3rem;
+    }
+    #navbar ul li a {
+        padding: 0px;
+    }
+    .h-title{
+        font-size: 4vw;
+    }
+    #home{
+        display: flex;
+        justify-content: center;
+        padding: 0;
+        height: 15px;
+        align-items: center;
+        margin-top: 124px;
+        margin-bottom: 150px;
+    }
+    #home::before {
+        height: 350px;
+    }
+    #all-itame #i-box{
+        margin: 0px;
+        flex-direction: column;
+    }
+    .box{
+        margin: 3px 0px;
+        padding: 8px;
+        box-sizing: border-box;
+    }
+    
+    .right{
+        position: relative;
+        animation-name: s-right;
+        animation-duration: 1.5s;
+        animation-iteration-count: 1;   
+        animation-timing-function: ease;
+        animation-delay: 0.1s;
+    }
+    @keyframes s-right{
+        0%{
+            opacity: 0;
+            left: 190px;
+        }
+        100%{
+            opacity: 1;
+            left: 0px;
+        }
+    }
+
+    .left{
+        position: relative;
+        animation-name: s-left;
+        animation-duration: 1.5s;
+        animation-iteration-count: 1;
+        animation-timing-function: ease;
+        animation-delay: 1s;
+    }
+    @keyframes s-left{
+        0%{
+            opacity: 0;
+            right: 190px;
+        }
+        100%{
+            opacity: 1;
+            right: 0px;
+        }
+    }
+
+    .bottom{
+        position: relative;
+        animation-name: s-bottom;
+        animation-duration: 1.5s;
+        animation-iteration-count: 1;
+        animation-timing-function: ease;
+        animation-delay: 1.5s;
+    }
+    @keyframes s-bottom{
+        0%{
+            opacity: 0;
+            bottom: -190px;
+        }
+        100%{
+            opacity: 1;
+            bottom: 0px;
+        }
+    }
+    .c-box{
+        padding: 8px;
+    }
+    #claint::before{
+        height: 43%;
+    }
+}
