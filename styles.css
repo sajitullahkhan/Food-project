@@ -2,31 +2,39 @@
     margin: 0;
     padding: 0;
 }
+
 html{
     scroll-behavior: smooth;
 }
-/* nav section */
-#logo {
-    margin: 10px 10px;
+html::-webkit-scrollbar {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+    display: none;
+    
 }
 
-#logo img {
-    height: 50px;
-    margin: 3px 3px;
-}
-
-#stcky{
+/* nav section starts */
+.navbar {
+    display: flex;
+    align-items: center;
+    font-family: 'Rubik', sans-serif;
     top: 0px;
     position: sticky;
     z-index: 3;
-
 }
-#navbar {
-    display: flex;
-    align-items: center;
+
+.logo {
+    margin: 5px 20px 5px 5px;
+} 
+.logo-img {
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    object-fit: cover;
+    margin: 3px 3px;
 } 
 
-#navbar::before {
+.navbar::before {
     content: "";
     background-color: black;
     position: absolute;
@@ -35,35 +43,138 @@ html{
     height: 100%;
     width: 100%;
     z-index: -1;
-    opacity: .4;
+    opacity: .7;
 }
 
-#navbar ul {
+.nav-btn{
     display: flex;
+    align-items: center;
+    gap: 20px;
+    font-size: 20px;
+    height: 40px;
 }
 
-#navbar ul li {
-    list-style: none;
-    font-size: 1.3rem;
-}
-
-#navbar ul li a {
+.nav-btn a {
     border-radius: 3px;
     color: white;
-    display: block;
-    padding: 7px;
-    margin: 0px 10px;
-    font-family: 'Rubik', sans-serif;
     text-decoration: none;
+    transition: .3s;
 }
 
-#navbar ul li a:hover {
-    color: black;
-    background-color: white;
+.nav-btn a:hover {
+    opacity: 0.7;
+}
+.nav-btn a:active {
+    border-bottom: 2px solid white;
 }
 
-/* home section */
-#home {
+.log{
+    position: absolute;
+    right: 20px;
+}
+
+.Sign-btn {
+    font-family: 'Rubik', sans-serif;
+    font-size: 20px;
+    height: 40px;
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    background-color: transparent;
+    transition: .3s;
+}
+
+.Sign-btn:hover {
+    border-bottom: 2px solid white;
+}
+
+.Sign-btn:active {
+    border-bottom: 2px solid white;
+}
+#x {
+    display: none;
+} 
+.x-menu{
+    display: none;
+}
+.menu-title{
+    display: none;
+}
+
+@media screen and (max-width: 700px){
+    .x-menu{
+        display: flex;
+    }
+    .menu-title{
+        display: flex;
+    }
+    .x-menu {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        cursor: pointer;
+        color: white;
+        transition: all 0.3s ease;
+        z-index: 5;
+    }
+
+    .menu-title {
+        color: white;
+        margin: 18px 0px;
+    }
+
+    input[type="checkbox"] {
+        display: none;
+    }
+
+    .menu-btn i {
+        font-size: 40px;
+    }
+
+    #x:checked ~ .x-menu{
+        right: 260px;
+    }
+
+    #x:checked ~ .x-menu i::before{
+        content: "\f00d";
+    }
+
+    .nav-btn{
+        position: absolute;
+        top: 0;
+        right: -300px;
+        flex-direction: column;
+        height: 100vh;
+        width: 300px;
+        background-color: black;
+        z-index: 1;
+        transition: all .3s ease;
+    }
+
+    #x:checked ~ .nav-btn{
+        right: 0;
+    }
+    
+    .nav-btn a {
+        padding: 10px;
+        border-radius: 3px;
+        color: white;
+        text-decoration: none;
+        transition: .3s;
+        width: 100%;
+        text-align: center;
+    }
+
+    .log {
+        position: absolute;
+        right: 60px;
+    }
+}
+/* nav section ends */
+
+/* header section starts*/
+.home {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -74,7 +185,7 @@ html{
     padding: 3px 600px;
 }
 
-#home::before {
+.home::before {
     content: "";
     position: absolute;
     background: url("image/home-background.jpg") no-repeat center center/cover;
@@ -86,21 +197,30 @@ html{
     opacity: .8;
 }
 
-.h-title {
+.header-title {
     font-family: 'Maven Pro', sans-serif;
     color: white;
     font-size: 3rem;
     padding: 12px;
 }
 
+.h-itame{
+    display: flex;
+    font-size: 2.5rem;
+    font-family: 'Maven Pro', sans-serif;
+    justify-content: center;
+    align-items: center;
+    height: 133px;
+}
 
-#home p {
+.home p {
     font-family: 'Maven Pro', sans-serif;
     font-size: 1.3rem;
     color: white;
 }
 
-.btn{
+
+.header-btn{
     margin: 15px;
     padding: 6px 30px;
     border: 2px solid white;
@@ -111,22 +231,14 @@ html{
     border-radius: 10px;
     cursor: pointer;
 }
-.btn:hover{
+.header-btn:hover{
     color: black;
     background-color: white;
 }
 
-/* h section */
-.h-itame{
-    display: flex;
-    font-size: 2.5rem;
-    font-family: 'Maven Pro', sans-serif;
-    justify-content: center;
-    align-items: center;
-    height: 133px;
-}
+/* header section */
 
-/* itame's section */
+/* item's section */
 #all-itame #i-box{
     display: flex;
     margin: 40px;
@@ -242,10 +354,10 @@ html{
     #navbar ul li a {
         padding: 0px;
     }
-    .h-title{
+    .header-title{
         font-size: 4vw;
     }
-    #home{
+    .home{
         display: flex;
         justify-content: center;
         padding: 0;
@@ -254,7 +366,7 @@ html{
         margin-top: 124px;
         margin-bottom: 150px;
     }
-    #home::before {
+    .home::before {
         height: 350px;
     }
     #all-itame #i-box{
