@@ -55,14 +55,14 @@ html::-webkit-scrollbar {
 }
 
 .nav-btn a {
-    border-radius: 3px;
     color: white;
     text-decoration: none;
     transition: .3s;
 }
 
 .nav-btn a:hover {
-    opacity: 0.7;
+    opacity: 0.8;
+    border-bottom: 1px solid white;
 }
 .nav-btn a:active {
     border-bottom: 2px solid white;
@@ -150,6 +150,7 @@ html::-webkit-scrollbar {
         background-color: black;
         z-index: 1;
         transition: all .3s ease;
+        overflow: hidden;
     }
 
     #x:checked ~ .nav-btn{
@@ -180,9 +181,8 @@ html::-webkit-scrollbar {
     justify-content: center;
     align-items: center;
     text-align: center;
-    height: 500px;
+    height: 270px;
     margin-bottom: 86px;
-    padding: 3px 600px;
 }
 
 #home::before {
@@ -191,7 +191,7 @@ html::-webkit-scrollbar {
     background: url("image/home-background.jpg") no-repeat center center/cover;
     top: 0px;
     left: 0px;
-    height: 64%;
+    height: 430px;
     width: 100%;
     z-index: -1;
     opacity: .8;
@@ -202,9 +202,10 @@ html::-webkit-scrollbar {
     color: white;
     font-size: 3rem;
     padding: 12px;
+    width: 482px;
 }
 
-.h-itame{
+.h-title{
     display: flex;
     font-size: 2.5rem;
     font-family: 'Maven Pro', sans-serif;
@@ -215,8 +216,9 @@ html::-webkit-scrollbar {
 
 #home p {
     font-family: 'Maven Pro', sans-serif;
-    font-size: 1.3rem;
+    font-size: 20px;
     color: white;
+    width: 502px;
 }
 
 
@@ -230,6 +232,8 @@ html::-webkit-scrollbar {
     font-family: 'Rubik', sans-serif;
     border-radius: 10px;
     cursor: pointer;
+    width: 200px;
+    transition: all .3s ease;
 }
 .header-btn:hover{
     color: black;
@@ -238,14 +242,69 @@ html::-webkit-scrollbar {
 
 /* header section */
 
-/* item's section */
-#all-itame #i-box{
-    display: flex;
-    margin: 40px;
+/* foods section */
+.item-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    gap: 5px;
+    margin: 0 60px;
 }
 
-#i-box .box img{
-    height: 150px;
+@media screen and (max-width: 1700px) {
+    .item-grid{
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+}
+@media screen and (max-width: 1400px) {
+    .item-grid{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+@media screen and (max-width: 1030px) {
+    .item-grid{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+@media screen and (max-width: 730px) {
+    .item-grid{
+        grid-template-columns: 1fr;
+    }
+}
+
+.item-grid .box img{
+    margin-top: 15px;
+    height: 200px;
+    width: 200px;
+    border-radius: 20px;
+    object-fit: cover;
+}
+.item-grid .box h2{
+    margin: 10px;
+    height: 75px;
+}
+
+.price{
+    color: rgb(28, 207, 28);
+    font-weight: bolder;
+}
+
+.add-btn{
+    font-size: 20px;
+    font-weight: bolder;
+    color: rgb(255, 242, 255);
+    margin-top: 20px;
+    margin-bottom: 10px;
+    height: 35px;
+    width: 190px;
+    border: none;
+    border-radius: 10px;
+    background-color: rgb(206, 144, 9);
+    cursor: pointer;
+    transition: all .3s ease;
+}
+
+.add-btn:hover{
+    background-color: rgba(206, 144, 9, 0.699);
 }
 
 .box{
@@ -253,192 +312,99 @@ html::-webkit-scrollbar {
     flex-direction: column;
     align-items: center;
     border-radius: 25px;
-    margin: 5px;
     padding: 40px;
-    width: 100%;
     border: 2px solid #c9aeae;
-    background-color: rgb(248, 245, 240);
+    background-color: rgba(0, 0, 0, 0.623);
+    color: white;
 }
-/* animation section */
-.pc-left{
-    position: relative;
-    animation-name: s-left;
-    animation-duration: 2s;
-    animation-iteration-count: 1;   
-    animation-timing-function: ease;
-    animation-delay: 0.1s;
-}
-@keyframes s-left{
-    0%{
-        opacity: 0;
-        right: 190px;
-    }
-    100%{
-        opacity: 1;
-        right: 0px;
-    }
-    
+/* foods section ends*/
+
+/* Reviews section */
+.review-title{
+    text-align: center;
+    font-size: 25px;
+    margin-top: 80px;
+    background-color: #2b2929;
+    color: white;
+    padding-top: 20px;
 }
 
-.pc-bottom{
-    position: relative;
-    animation-name: s-bottom;
-    animation-duration: 2s;
-    animation-iteration-count: 1;
-    animation-timing-function: ease;
-    animation-delay: 0.1s;
-}
-@keyframes s-bottom{
-    0%{
-        opacity: 0;
-        bottom: -190px;
-    }
-    100%{
-        opacity: 1;
-        bottom: 0px;
-    }
-}
-
-.pc-right{
-    position: relative;
-    animation-name: s-right;
-    animation-duration: 2s;
-    animation-iteration-count: 1;
-    animation-timing-function: ease;
-    animation-delay: 0.1s;
-}
-@keyframes s-right{
-    0%{
-        opacity: 0;
-        left: 190px;
-    }
-    100%{
-        opacity: 1;
-        left: 0px;
-    }
-}
-/* add's section */
-#claint{
-    height: 577px;
-}
-
-#claint::before{
-    content: "";
-    position: absolute;
-    background: url("image/roasted-pork-steak-dark-wooden-surface.jpg") no-repeat center center/cover;
-    width: 100%;
-    height: 30%;
-    z-index: -1;
-    opacity: .4;
-}
-
-#biv-claint{
+.customer{
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    background-color: #2b2929;
+}
+
+.customer-review{
+    display: flex;
+    flex-direction: column;
     align-items: center;
-    height: 77px;
+    justify-content: center;
+    padding: 20px;
+    border-radius: 20px;
+    margin-top: 20px;
 }
 
-#claint img{
-    height: 100px;
-}
 
-.c-box{
-    padding: 34px;
-}
-
-@media screen and (max-width: 1240px){
-    #navbar ul li{
-        font-size: 1.3rem;
-    }
-    #navbar ul li a {
-        padding: 0px;
-    }
-    .header-title{
-        font-size: 4vw;
-    }
-    #home{
-        display: flex;
-        justify-content: center;
-        padding: 0;
-        height: 15px;
-        align-items: center;
-        margin-top: 124px;
-        margin-bottom: 150px;
-    }
-    #home::before {
-        height: 350px;
-    }
-    #all-itame #i-box{
-        margin: 0px;
-        flex-direction: column;
-    }
-    .box{
-        margin: 3px 0px;
-        padding: 8px;
-        box-sizing: border-box;
-    }
+.profile-img{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    overflow: hidden;
+    height: 150px;
+    width: 150px;
     
-    .right{
-        position: relative;
-        animation-name: s-right;
-        animation-duration: 1.5s;
-        animation-iteration-count: 1;   
-        animation-timing-function: ease;
-        animation-delay: 0.1s;
-    }
-    @keyframes s-right{
-        0%{
-            opacity: 0;
-            left: 190px;
-        }
-        100%{
-            opacity: 1;
-            left: 0px;
-        }
-    }
-
-    .left{
-        position: relative;
-        animation-name: s-left;
-        animation-duration: 1.5s;
-        animation-iteration-count: 1;
-        animation-timing-function: ease;
-        animation-delay: 1s;
-    }
-    @keyframes s-left{
-        0%{
-            opacity: 0;
-            right: 190px;
-        }
-        100%{
-            opacity: 1;
-            right: 0px;
-        }
-    }
-
-    .bottom{
-        position: relative;
-        animation-name: s-bottom;
-        animation-duration: 1.5s;
-        animation-iteration-count: 1;
-        animation-timing-function: ease;
-        animation-delay: 1.5s;
-    }
-    @keyframes s-bottom{
-        0%{
-            opacity: 0;
-            bottom: -190px;
-        }
-        100%{
-            opacity: 1;
-            bottom: 0px;
-        }
-    }
-    .c-box{
-        padding: 8px;
-    }
-    #claint::before{
-        height: 43%;
-    }
 }
+
+.profile-img > img {
+    height: 200px;
+    width: 200px;
+    object-fit: cover;
+}
+
+.customer-review h2{
+    color: white;
+    margin-bottom: 10px;
+}
+
+.review-icon{
+    color: rgb(255, 187, 0);
+}
+
+.review-p{
+    width: 250px;
+    text-align: center;
+    margin-top: 5px;
+    padding-bottom: 8px;
+    color: white;
+}
+
+.all-reviews{
+    position: absolute;
+    right: 8px;
+    height: 38px;
+    width: 100px;
+    border: 3px solid rgb(255, 255, 255);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.all-reviews a{
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+    transition: all .3s ease;
+}
+.all-reviews:hover{
+    color: black;
+}
+.all-reviews a:hover{
+    background-color: white;
+    color: black;
+}
+/* Reviews section ends */
+
