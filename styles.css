@@ -500,3 +500,53 @@ html::-webkit-scrollbar {
         margin-top: 20px;
     }
 }
+
+.card a{
+    text-decoration: none;
+    color: black;
+}
+
+.card{
+    display: grid;
+    grid-template-areas: "c";
+    align-items: center;
+    justify-content: start;
+    position: sticky;
+    bottom: 20px;
+    margin-left: 20px;
+    cursor: pointer;
+    margin-right: 97%;
+}
+
+.card-btn {
+    background-color: rgb(210, 230, 211);
+    border: 2px solid rgb(255, 255, 255);
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    grid-area: c;
+}
+
+.card .card-quantity{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background-color: black;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    grid-area: c;
+    margin-left: 2px;
+    opacity: 0;
+    transition: all .3s ease;
+}
+
+.card:hover .card-quantity{
+    opacity: 1;
+}
