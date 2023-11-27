@@ -28,7 +28,6 @@ html body{
   text-align: center;
   font-size: 60px;
   margin: 0;
-  margin-bottom: 40px;
 }
 
 .input{
@@ -75,15 +74,6 @@ html body{
 .back{
   position: relative;
   left: 95%;
-  bottom: 7%;
+  bottom: 1%;
   font-size: 30px;
-}
-
-.forgot-pass{
-  display: flex;
-  justify-content: end;
-}
-
-.forgot-pass a{
-  color: white;
 }
