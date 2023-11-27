@@ -24,9 +24,7 @@ html::-webkit-scrollbar {
 }
 
 .menu-social-media{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    display: none;
     font-size: 30px;
 }
 
@@ -110,8 +108,15 @@ html::-webkit-scrollbar {
     display: none;
 }
 
+.menu-social-media{
+    display: none;
+}
+
 @media screen and (max-width: 700px){
     .menu-social-media{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
         width: 200px;
         margin-top: 20px;
         position: relative;
@@ -500,7 +505,7 @@ html::-webkit-scrollbar {
     font-size: 30px;
     padding: 10px;
     background-color: rgba(0, 0, 0, 0.658);
-    width: 200px;
+    width: 300px;
     position: absolute;
     right: 0;
     border-radius: 15px;
