@@ -74,6 +74,7 @@ html::-webkit-scrollbar {
 }
 
 .Sign-btn {
+    text-decoration: none;
     font-family: 'Rubik', sans-serif;
     font-size: 20px;
     height: 40px;
@@ -243,6 +244,14 @@ html::-webkit-scrollbar {
 /* header section */
 
 /* foods section */
+#foods{
+    color: rgba(20, 19, 19, 0.62);
+    padding-bottom: 100px;
+}
+
+.items-icon{
+    color: rgba(61, 30, 30, 0.774);
+}
 .item-grid{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
@@ -314,7 +323,7 @@ html::-webkit-scrollbar {
     border-radius: 25px;
     padding: 40px;
     border: 2px solid #c9aeae;
-    background-color: rgba(0, 0, 0, 0.623);
+    background-color: rgba(0, 0, 0, 0.62);
     color: white;
 }
 /* foods section ends*/
@@ -323,7 +332,6 @@ html::-webkit-scrollbar {
 .review-title{
     text-align: center;
     font-size: 25px;
-    margin-top: 80px;
     background-color: #2b2929;
     color: white;
     padding-top: 20px;
@@ -408,3 +416,87 @@ html::-webkit-scrollbar {
 }
 /* Reviews section ends */
 
+/* Contact us section */
+#contact-us::before{
+    content: "";
+    background: url(image/roasted-pork-steak-dark-wooden-surface.jpg) center/cover;
+    z-index: -3;
+    position: absolute;
+    left: 0;
+    height: 600px;
+    width: 100%;
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    margin: auto;
+    color: white;
+}
+
+.form-title{
+    text-align: center;
+    margin: 50px;
+}
+
+#name{
+    height: 30px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+#email{
+    height: 30px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.ask-btn{
+    text-align: center;
+    margin-top: 40px;
+}
+.submit{
+    height: 40px;
+    width: 150px;
+    border: 1px solid white;
+    border-radius: 10px;
+    font-size: 20px;
+    font-weight: 700;
+    background-color: transparent;
+    color: white;
+    transition: all .3s ease;
+}
+
+.submit:hover{
+    background-color: white;
+    color: black;
+}
+.social-media a{
+    text-decoration: none;
+    color: white;
+}
+
+.social-media{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 30px;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.658);
+    width: 200px;
+    position: absolute;
+    right: 0;
+    border-radius: 15px;
+    margin-top: 20px;
+}
+
+@media screen and (max-width: 800px){
+    .form{
+        width: 60%;
+    }
+    .social-media{
+        position: static;
+        margin: auto;
+        margin-top: 20px;
+    }
+}
