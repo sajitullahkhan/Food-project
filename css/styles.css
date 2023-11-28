@@ -274,7 +274,7 @@ html::-webkit-scrollbar {
 .item-grid{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    gap: 5px;
+    gap: 20px;
     margin: 0 60px;
 }
 
@@ -335,13 +335,13 @@ html::-webkit-scrollbar {
     width: 190px;
     border: none;
     border-radius: 10px;
-    background-color: rgb(206, 144, 9);
+    background-color: rgba(0, 0, 0);
     cursor: pointer;
     transition: all .3s ease;
 }
 
 .add-btn:hover{
-    background-color: rgba(206, 144, 9, 0.699);
+    background-color: rgba(0, 0, 0, 0.519);
 }
 
 .box{
@@ -350,7 +350,6 @@ html::-webkit-scrollbar {
     align-items: center;
     border-radius: 25px;
     padding: 40px;
-    border: 2px solid #c9aeae;
     background-color: rgba(0, 0, 0, 0.62);
     color: white;
 }
