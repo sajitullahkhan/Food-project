@@ -420,26 +420,25 @@ html::-webkit-scrollbar {
 }
 
 .all-reviews{
-    position: absolute;
-    right: 8px;
-    height: 38px;
-    width: 100px;
-    border: 3px solid rgb(255, 255, 255);
-    border-radius: 10px;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    justify-content: end;
+    margin-right: 10px;
 }
 
 .all-reviews a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 38px;
+    width: 105px;
+    border: 3px solid rgb(255, 255, 255);
+    border-radius: 10px;
     text-decoration: none;
     color: white;
-    padding: 10px;
+    padding: 5px;
     transition: all .3s ease;
 }
-.all-reviews:hover{
-    color: black;
-}
+
 .all-reviews a:hover{
     background-color: white;
     color: black;
