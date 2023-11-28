@@ -209,7 +209,7 @@ html::-webkit-scrollbar {
 #home::before {
     content: "";
     position: absolute;
-    background: url("../image/home-background.jpg") no-repeat center center/cover;
+    background: url("../image/home-background.webp") no-repeat center center/cover;
     top: 0px;
     left: 0px;
     height: 600px;
@@ -441,7 +441,7 @@ html::-webkit-scrollbar {
 /* Contact us section */
 #contact-us::before{
     content: "";
-    background: url("../image/roasted-pork-steak-dark-wooden-surface.jpg") center/cover;
+    background: url("../image/roasted-pork-steak-dark-wooden-surface.webp") center/cover;
     z-index: -3;
     position: absolute;
     left: 0;
