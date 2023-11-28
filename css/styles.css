@@ -201,7 +201,6 @@ html::-webkit-scrollbar {
     justify-content: center;
     align-items: center;
     text-align: center;
-    /* height: 270px; */
     height: 500px;
     margin-bottom: 86px;
 }
@@ -223,7 +222,7 @@ html::-webkit-scrollbar {
     color: white;
     font-size: 2.5rem;
     padding-bottom: 20px;
-    width: 482px;
+    width: auto;
 }
 
 #home p {
@@ -251,7 +250,16 @@ html::-webkit-scrollbar {
     color: black;
     background-color: white;
 }
-
+@media screen and (max-width: 700px){
+    .header-title {
+        font-size: 2rem;
+        padding-bottom: 20px;
+    }
+    #home p {
+        width: 360px;
+        font-size: 1.2rem;
+    }
+}
 /* header section */
 
 /* foods section */
@@ -445,7 +453,7 @@ html::-webkit-scrollbar {
     z-index: -3;
     position: absolute;
     left: 0;
-    height: 600px;
+    height: 100%;
     width: 100%;
 }
 
@@ -455,22 +463,23 @@ html::-webkit-scrollbar {
     width: 40%;
     margin: auto;
     color: white;
+    padding-top: 8%;
 }
 
 .form-title{
     text-align: center;
-    margin: 50px;
+    margin: 50px 0px;
 }
 
 #name{
-    height: 30px;
+    height: 40px;
     border-radius: 5px;
-    margin-bottom: 10px;
+    margin-bottom: 30px;
 }
 #email{
-    height: 30px;
+    height: 40px;
     border-radius: 5px;
-    margin-bottom: 10px;
+    margin-bottom: 30px;
 }
 
 .ask-btn{
@@ -516,6 +525,9 @@ html::-webkit-scrollbar {
 }
 
 @media screen and (max-width: 800px){
+    #contact-us::before{
+        height: 125%;
+    }
     .form{
         width: 60%;
     }
@@ -524,7 +536,7 @@ html::-webkit-scrollbar {
         display: flex;
         align-items: center;
         justify-content: center;
-        margin-top: 10px;
+        margin-top: 100px;
     }
 }
 /* Contact us section ends */
